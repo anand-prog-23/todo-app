@@ -1,12 +1,11 @@
-from functions import get_todos,write_todos
+from functions import get_todos, write_todos
 import time
-
 
 while True:
     user_action = input("Type add , show , edit or exit and todo:\n").strip()
 
     if user_action.startswith("add"):
-        todo = user_action[4:]+"\n"
+        todo = user_action[4:] + "\n"
 
         todos = get_todos()
 
@@ -29,7 +28,7 @@ while True:
 
             todos = get_todos()
             user_input = input("Add new edited \n")
-            todos[user_edit] = user_input+"\n"
+            todos[user_edit] = user_input + "\n"
 
             write_todos(todos)
 
